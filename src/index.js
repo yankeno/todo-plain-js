@@ -63,3 +63,11 @@ const addIncompleteList = (text) => {
 };
 
 document.getElementById("add-button").addEventListener("click", addTodo);
+document.getElementById("todo-name").addEventListener("keydown", (e) => {
+  if(!e.isComposing && e.key === "Enter") {
+    console.log("発火してるよ");
+    addTodo();
+  }
+  console.log("return")
+  return;
+})
